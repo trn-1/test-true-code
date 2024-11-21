@@ -1,0 +1,36 @@
+@use "sass:color";
+
+/* Цвета */
+$primary-color: hsl(214, 55%, 52%);
+$secondary-color: hsl(0, 0%, 100%);
+$switcher-color: color.adjust($primary-color, $lightness: 10%);
+$switcher-active-color: color.change($secondary-color, $alpha: 0.5);
+$switcher-bg-color: hsl(163, 3%, 57%);
+$error-color: hsl(0, 77%, 46%);
+$error-color-80: color.change($error-color, $alpha: 0.8);
+
+$primary-color-90: color.change($primary-color, $alpha: 0.9);
+$primary-color-80: color.change($primary-color, $alpha: 0.8);
+$primary-color-60: color.change($primary-color, $alpha: 0.6);
+$primary-color-50: color.change($primary-color, $alpha: 0.5);
+$primary-color-30: color.change($primary-color, $alpha: 0.3);
+$primary-color-10: color.change($primary-color, $alpha: 0.1);
+
+$primary-color-dark-30: color.adjust($primary-color, $lightness: -30%);
+$primary-color-dark-20: color.adjust($primary-color, $lightness: -20%);
+$primary-color-dark-10: color.adjust($primary-color, $lightness: -10%);
+
+/* Брейкпоинты */
+$brp-sm: 576px;
+$brp-md: 768px;
+$brp-lg: 1100px;
+
+/* Размеры */
+$max-width: 1100px;
+$min-height-lg: 91vh;
+$min-height-md: 91vh;
+$border-radius: 12px;
+
+$transition-fast: 0.3s;
+$transition-medium: 0.6s;
+$transition-slow: 1s;

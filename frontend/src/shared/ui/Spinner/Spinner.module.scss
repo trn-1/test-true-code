@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.Spinner {
+    display: flex;
+    align-items: center;
+    stroke: $primary-color;
+    width: 75px;
+  }
+  
+  .Spinner svg {
+    transform-origin: center;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .Spinner circle {
+    fill: none;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-width: 4;
+  
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+  
+    50% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -35px;
+    }
+  
+    100% {
+      stroke-dashoffset: -125px;
+    }
+  }

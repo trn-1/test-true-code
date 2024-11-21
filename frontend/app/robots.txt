@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+
+Disallow: /confirm
+
+Disallow: /payment
+
+Disallow: /offer
+
+Disallow: /politic
+
+Sitemap:

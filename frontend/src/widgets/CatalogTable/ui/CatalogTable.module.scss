@@ -1,0 +1,86 @@
+@import "variables.scss";
+
+.CatalogTable {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+  width: 100%;
+
+  th {
+    border: none;
+    padding: 10px;
+    width: 20%;
+  }
+
+  thead {
+    padding: 6px;
+  }
+
+  tr {
+    border-bottom: 1px solid $primary-color-30;
+  }
+
+  td {
+    text-align: center;
+    padding: 4px;
+  }
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  cursor: pointer;
+  height: 70px;
+}
+
+.row:hover {
+  background: $primary-color-10;
+  transition: $transition-fast background-color;
+}
+
+.spinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+}
+
+.header {
+  font-size: 1.1em;
+  background: $primary-color-30;
+  border-right: 1px solid lightgray;
+  padding: 2px 4px;
+}
+
+.canSort:hover {
+  cursor: pointer;
+  background: $primary-color-50;
+  transition: $transition-fast background-color;
+}
+
+.pageButton {
+  padding: 4px 12px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 6px;
+  background: $primary-color-60;
+  transition: $transition-fast background-color;
+}
+
+.buttonActive {
+  cursor: pointer;
+}
+
+.buttonActive:hover {
+  background: $primary-color-90;
+}
+
+.pageNumber {
+  font-size: 1.2em;
+  font-weight: 600;
+}

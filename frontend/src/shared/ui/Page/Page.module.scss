@@ -1,0 +1,26 @@
+@import "variables.scss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Page {
+  animation: fadeIn 0.5s ease-in-out;
+  color: $primary-color-dark-30;
+  min-height: $min-height-lg;
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $brp-md) {
+    min-height: $min-height-md;
+  }
+}
+
+
