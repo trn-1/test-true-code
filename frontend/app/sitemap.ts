@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const site = `${process.env.NEXT_PUBLIC_CLIENT_HOST}/`;
+  const site = 'http://localhost:3000';
 
   return [
     {

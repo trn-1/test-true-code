@@ -4,17 +4,21 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+COPY ./prisma ./prisma
+
+RUN npm install @prisma/client prisma
+
+RUN npx prisma generate
+
+RUN npx prisma migrate dev --name init
+
 RUN npm install
 
 COPY . .
 
 RUN npm run build
 
-RUN npx prisma migrate dev --name init
-
 RUN node prisma/init.js
-
-RUN npx prisma generate
 
 EXPOSE 4000
 

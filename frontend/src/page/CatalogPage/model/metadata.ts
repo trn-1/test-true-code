@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: [
     'тестовое задание',
   ],
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_CLIENT_HOST}`),
+  metadataBase: new URL('http://localhost:3000'),
   openGraph: {
     title: 'Тестовое задание',
     description: 'Страница тестового задания для компании true.code',
-    url: `${process.env.NEXT_PUBLIC_CLIENT_HOST}`,
+    url: 'http://localhost:3000',
     siteName: 'Тестовое задание для компании true.code',
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_CLIENT_HOST || 'http://localhost:3000'}/favicon.ico`,
-    apple: `${process.env.NEXT_PUBLIC_CLIENT_HOST || 'http://localhost:3000'}/favicon.ico`,
+    icon: `${'http://localhost:3000'}/favicon.ico`,
+    apple: `${'http://localhost:3000'}/favicon.ico`,
   }
 };
