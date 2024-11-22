@@ -2,7 +2,6 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { Product } from '@prisma/client';
 import { promises as fs } from 'fs';
 import { join } from 'path';
-import { ProductService } from '../product/product.service';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
@@ -29,10 +28,6 @@ export class FilesService {
     const postfix =
       lastDotIndex !== -1 ? file.originalname.substring(lastDotIndex) : '';
     const uploadFileName = `${Date.now()}${postfix}`;
-
-    // await this.productService.updateProduct(id, {
-    //   photoPath: uploadFileName,
-    // });
 
    await this.prisma.product.update({
       where: { id },

@@ -20,6 +20,6 @@ import { PrismaService } from 'src/prisma/prisma.service';
     ProductModule,
   ],
   controllers: [FilesController],
-  providers: [FilesService, ProductService, PrismaService],
+  providers: [FilesService, PrismaService],
 })
 export class FilesModule {}
