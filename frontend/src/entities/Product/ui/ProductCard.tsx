@@ -225,7 +225,7 @@ export const ProductCard = (props: ProductCardProps): JSX.Element => {
             data.photoPath ? (
               <>
                 <Image
-                  src={`${process.env.SERVER_HOST || BASE_URL}/uploads/${data.photoPath}`}
+                  src={`${process.env.SERVER_HOST_STATIC || 'http://localhost:4000'}/uploads/${data.photoPath}`}
                   alt='фото'
                   className={cls.photo}
                   width={300}
